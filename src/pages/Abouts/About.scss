@@ -1,0 +1,125 @@
+.about__main {
+    width: 100%;
+    background-color: #181818;
+    padding-bottom: 123px;
+    .about__one {
+        width: 80%;
+        height: 200px;
+        margin: 0 auto;
+        text-align: center;
+
+        h1 {
+            font-family: Playfair Display SC;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 24px;
+            width: 100%;
+            line-height: 36px;
+            margin-bottom: 28px;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+    }
+
+    .about__two {
+        width: 80%;
+        // height: 400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        // background-color: #181818;
+        -moz-box-align: center;
+        align-items: center;
+        padding-bottom: 137px;
+
+        .about__two__left {
+            height: 100%;
+            z-index: 4;
+            background-color: #000;
+            margin: 0;
+            padding-top: 40p;
+
+            img {
+                width: 458px;
+                height: 369px;
+            }
+        }
+
+        .about__two__right {
+            width: 40%;
+            color: #fff;
+            padding-top: 93px;
+            padding-left: 20px;
+
+            h1 {
+                font-family: Playfair Display SC;
+                text-transform: uppercase;
+                color: #fff;
+                line-height: 36px;
+                font-weight: 700;
+                font-size: 24px;
+                margin-bottom: 14px;
+            }
+
+            p {
+                text-align: left;
+                width: 386px;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 20px;
+                color: hsla(0, 0%, 100%, 0.8);
+            }
+        }
+    }
+
+    .about__three {
+        width: 100%;
+        background-color: #000;
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+    }
+
+    .about__four {
+        width: 995px;
+        margin: 0 auto;
+        -moz-box-pack: center;
+        justify-content: center;
+
+        .about__four__detail {
+            padding-top: 80px;
+            text-align: left;
+            display: -moz-box;
+            display: flex;
+            -moz-box-orient: vertical;
+            -moz-box-direction: normal;
+            flex-direction: column;
+            justify-items: center;
+            -moz-box-align: center;
+            align-items: center;
+
+            h1 {
+                color: #fff;
+                font-family: Playfair Display SC;
+                text-transform: uppercase;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+            }
+
+            p {
+                color: hsla(0, 0%, 100%, .8);
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 20px;
+            }
+        }
+    }
+}

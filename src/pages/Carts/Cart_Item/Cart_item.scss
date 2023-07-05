@@ -1,0 +1,82 @@
+.cart__item__container {
+    width: 640px;
+    height: 240px;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 12px;
+    display: flex;
+
+    .cart__item__left {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .item__img {
+            width: 90%;
+            height: 90%;
+            border: 1px solid black;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .cart__item_right {
+        width: 50%;
+        height: 100%;
+
+        display: flex;
+        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .item__right__detail {
+            width: 90%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            .item__infor {
+                width: 100%;
+                height: 80px;
+                display: flex;
+
+                h5 {
+                    width: 80%;
+                    text-align: center;
+                    line-height: 80px;
+                }
+                i {
+                    width: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .item__quantity {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                .quantity__yourcart {
+                    width: 60%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .price__yourcart {
+                    width: 40%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .item__total {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

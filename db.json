@@ -1,0 +1,179 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "admin@gmail.com",
+      "idAdmin": true,
+      "firstName": "kien",
+      "lastName": "hai",
+      "password": 123,
+      "email": "haikien1@gmail.com",
+      "avatar": "https://vi.pngtree.com/freepng/user-avatar-boy_4693645.html",
+      "carts": [
+        {
+          "productId": "1",
+          "quantity": 2,
+          "des": "abdhawbdawbdhwbd"
+        },
+        {
+          "productId": "9",
+          "quantity": 5,
+          "des": "abdhawbdawbdhwbd"
+        }
+      ]
+    },
+    {
+      "userName": "hai kien",
+      "email": "haikein12@gmail.com",
+      "password": "12345",
+      "idAdmin": false,
+      "firstName": "New",
+      "lastName": "Member",
+      "avatar": "../images/food/Chateaubriand.png",
+      "id": 2,
+      "carts": [],
+      "receip": []
+    },
+    {
+      "userName": "bui hai kien",
+      "email": "haikien12@gmail.com",
+      "password": "0978656694",
+      "idAdmin": false,
+      "firstName": "New",
+      "lastName": "Member",
+      "avatar": "",
+      "id": 3,
+      "carts": []
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Chateaubriand",
+      "price": 30000,
+      "url": "../images/food/Chateaubriand.png",
+      "type": "food",
+      "stock": 5
+    },
+    {
+      "id": "2",
+      "name": "FILET ROSSINI",
+      "price": 30000,
+      "url": "../images/food/FILET_ROSSINI.jpg",
+      "type": "food",
+      "stock": 5
+    },
+    {
+      "id": "3",
+      "name": "Wagyu_A5",
+      "price": 30000,
+      "url": "../images/food/kagoshima_A5_copy.png",
+      "type": "food",
+      "stock": 5
+    },
+    {
+      "id": "4",
+      "name": "MIX_Grill",
+      "price": 30000,
+      "url": "../images/food/MIX_Grill.png",
+      "type": "food",
+      "stock": 5
+    },
+    {
+      "id": "5",
+      "name": "New York Striploin",
+      "price": 30000,
+      "url": "../images/food/New_York_Striploin.png",
+      "type": "food",
+      "stock": 5
+    },
+    {
+      "id": "6",
+      "name": "FILET MIGNON",
+      "price": 30000,
+      "url": "../images/food/RIB_EYE_MS_6_7.png",
+      "type": "food",
+      "stock": 5
+    },
+    {
+      "id": "7",
+      "name": "CHATEAUBRIAND USDA PRIME",
+      "price": 30000,
+      "url": "../images/food/Rib_eye_USDA_Prime.png",
+      "type": "food",
+      "stock": 5
+    },
+    {
+      "id": "8",
+      "name": "Ribeye Rossini",
+      "price": 30000,
+      "url": "../images/food/Ribeye_Rossini.jpg",
+      "type": "food",
+      "stock": 5
+    },
+    {
+      "id": "9",
+      "name": "KAIKEN RESERVA MALBEC",
+      "price": 30000,
+      "url": "../images/drink/KAIKEN_RESERVA_MALBEC.jpg",
+      "type": "drink",
+      "stock": 5
+    },
+    {
+      "id": "10",
+      "name": "KAIKEN ULTRA MALBEC",
+      "price": 30000,
+      "url": "../images/drink/KAIKEN_ULTRA_MALBEC.jpg",
+      "type": "drink",
+      "stock": 5
+    },
+    {
+      "id": "11",
+      "name": "LAPOSTOLLE CABERNET",
+      "price": 30000,
+      "url": "../images/drink/LAPOSTOLLE_CABERNET.jpg",
+      "type": "drink",
+      "stock": 5
+    },
+    {
+      "id": "12",
+      "name": "LE VOLTE DELL ORNELLAIA",
+      "price": 30000,
+      "url": "../images/drink/LE_VOLTE_DELL_ORNELLAIA.jpg",
+      "type": "drink",
+      "stock": 5
+    },
+    {
+      "id": "13",
+      "name": "MOUTON CADET BY BARON F.ROTHSCHILD",
+      "price": 30000,
+      "url": "../images/drink/MOUTON_CADET_BY_BARON _F.ROTHSCHILD.jpg",
+      "type": "drink",
+      "stock": 5
+    },
+    {
+      "id": "14",
+      "name": "SALENTEIN BARREL SELECTION",
+      "price": 30000,
+      "url": "../images/drink/SALENTEIN_BARREL_SELECTION.jpg",
+      "type": "drink",
+      "stock": 5
+    },
+    {
+      "id": "15",
+      "name": "SALENTEIN SINGLE VINEYARD",
+      "price": 30000,
+      "url": "../images/drink/SALENTEIN_SINGLE_VINEYARD.jpg",
+      "type": "drink",
+      "stock": 5
+    },
+    {
+      "id": "16",
+      "name": "VISTALBA CORTE C",
+      "price": 30000,
+      "url": "../images/drink/VISTALBA_CORTE_C.jpg",
+      "type": "drink",
+      "stock": 5
+    }
+  ]
+}
