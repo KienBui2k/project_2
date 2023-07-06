@@ -120,7 +120,7 @@ export default function Navbar() {
                                         aria-current="page"
                                         to="contact"
                                     >
-                                        Contact
+                                        Your Order
                                     </Link>
                                 </li>
                             </ul>

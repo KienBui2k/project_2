@@ -50,14 +50,14 @@ export default function Resgister() {
                         eventForm.target.inputUserName.value == "" ||
                         eventForm.target.inputUserEmail.value == ""
                     ) {
-                        toastError("vui long dien thu thong tin");
+                        toastError("please provide the following information!");
                         return;
                     }
                     if (
                         eventForm.target.inputPassword.value !=
                         eventForm.target.inputRePassword.value
                     ) {
-                        toastError("Mật khẩu xác nhận không đúng");
+                        toastError("Wrong confirmation password");
                         return;
                     }
                     if (loadingCheck) {
@@ -71,12 +71,12 @@ export default function Resgister() {
                             eventForm.target.inputUserName.value
                     );
                     if (resultCheck.data.length != 0) {
-                        toastError("ten gnuoi dung da ton tai");
+                        toastError("This username already exists!");
                         setLoadingCheck(false);
                         return;
                     }
                     setLoadingCheck(false);
-                    toastSuccess("bạn đã đăng ksy thành công");
+                    toastSuccess("You have successfully registered");
                     dispatch(
                         userLoginActions.register({
                             userName: eventForm.target.inputUserName.value,
@@ -87,7 +87,7 @@ export default function Resgister() {
                             lastName: "Member",
                             avatar: "../images/avatar/avatar.jpg",
                             carts: [],
-                            receip: [],
+                            receipt: [],
                         })
                     );
                 }}

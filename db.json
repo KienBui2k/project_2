@@ -10,7 +10,7 @@
       "email": "haikien1@gmail.com",
       "avatar": "../images/avatar/avatar.jpg",
       "carts": [],
-      "receip": []
+      "receipt": []
     },
     {
       "userName": "hai kien",
@@ -21,49 +21,8 @@
       "lastName": "Member",
       "avatar": "../images/avatar/avatar.jpg",
       "id": 2,
-      "carts": [
-        {
-          "productId": "1",
-          "quantity": 1,
-          "des": "đã mua sản phẩm",
-          "url": "../images/food/Chateaubriand.png",
-          "name": "Chateaubriand",
-          "price": 30
-        },
-        {
-          "productId": "10",
-          "quantity": 2,
-          "des": "đã mua sản phẩm",
-          "url": "../images/drink/KAIKEN_ULTRA_MALBEC.jpg",
-          "name": "KAIKEN MALBEC",
-          "price": 80
-        }
-      ],
-      "receip": [
-        {
-          "productId": "1",
-          "quantity": 1,
-          "des": "đã mua sản phẩm",
-          "url": "../images/food/Chateaubriand.png",
-          "name": "Chateaubriand",
-          "price": 30
-        },
-        {
-          "productId": "3",
-          "quantity": 2,
-          "des": "đã mua sản phẩm",
-          "url": "../images/food/kagoshima_A5_copy.png",
-          "name": "Wagyu_A5",
-          "price": 31
-        },
-        {
-          "productId": "12",
-          "quantity": 2,
-          "des": "đã mua sản phẩm",
-          "url": "../images/drink/LE_VOLTE_DELL_ORNELLAIA.jpg",
-          "name": "LE VOLTE DELL",
-          "price": 76
-        },
+      "carts": [],
+      "receipt": [
         {
           "productId": "1",
           "quantity": 1,
@@ -83,7 +42,7 @@
       "lastName": "Member",
       "avatar": "../images/avatar/avatar.jpg",
       "carts": [],
-      "receip": [],
+      "receipt": [],
       "id": 3
     }
   ],
@@ -123,7 +82,7 @@
     {
       "id": "5",
       "name": "New York Striploin",
-      "price": 332,
+      "price": 32,
       "url": "../images/food/New_York_Striploin.png",
       "type": "food",
       "stock": 12

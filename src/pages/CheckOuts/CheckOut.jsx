@@ -40,9 +40,9 @@ export default function CheckOut() {
                     id: userLoginStore.userInfor.id,
                     patchData: {
                         carts: [],
-                        receip: [
+                        receipt: [
                             ...userLoginStore.userInfor.carts,
-                            ...userLoginStore.userInfor.receip,
+                            ...userLoginStore.userInfor.receipt,
                         ],
                     },
                 })

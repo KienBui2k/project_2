@@ -137,7 +137,7 @@ export default function Menu_Item() {
                             onClick={() => navigate("/menu/food")}
                             className="back__to__menu"
                         >
-                            Back To Menu
+                            <button>Back To Menu</button>
                         </div>
                         <div className="addToCart">
                             <button
@@ -162,7 +162,7 @@ export default function Menu_Item() {
                                     );
                                 }}
                             >
-                                ADD TO CART
+                                Add To Cart
                             </button>
                         </div>
                     </div>
