@@ -21,15 +21,24 @@
       "lastName": "Member",
       "avatar": "../images/avatar/avatar.jpg",
       "id": 2,
-      "carts": [],
-      "receipt": [
+      "carts": [
         {
           "productId": "1",
-          "quantity": 1,
+          "quantity": 2,
           "des": "đã mua sản phẩm",
           "url": "../images/food/Chateaubriand.png",
           "name": "Chateaubriand",
           "price": 30
+        }
+      ],
+      "receipt": [
+        {
+          "productId": "9",
+          "quantity": 3,
+          "des": "đã mua sản phẩm",
+          "url": "../images/drink/KAIKEN_RESERVA_MALBEC.jpg",
+          "name": "KAIKEN RESERVA",
+          "price": 70
         }
       ]
     },
