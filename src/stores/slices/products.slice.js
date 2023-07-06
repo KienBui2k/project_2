@@ -25,7 +25,6 @@ const searchProductByName = createAsyncThunk(
 const checkOut = createAsyncThunk(
     "checkOut",
     async (checkObj) => {
-        console.log("11111", process.env.REACT_APP_SERVER_JSON + 'users/' + checkObj.id);
         let res = await axios.patch(process.env.REACT_APP_SERVER_JSON + 'users/' + checkObj.id, checkObj.patchData)
         return res.data
     }

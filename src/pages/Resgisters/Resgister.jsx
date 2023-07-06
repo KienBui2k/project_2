@@ -72,7 +72,7 @@ export default function Resgister() {
                             idAdmin: false,
                             firstName: "New",
                             lastName: "Member",
-                            avatar: "",
+                            avatar: "../images/avatar/avatar.jpg",
                             carts: [],
                             receip: [],
                         })

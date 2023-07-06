@@ -4,13 +4,23 @@ import "./Menu_Item.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { productActions } from "../../../stores/slices/products.slice";
 import { userLoginActions } from "../../../stores/slices/userLogin.slice";
-
+import toast, { Toaster } from "react-hot-toast";
 export default function Menu_Item() {
     const { id } = useParams();
     const [quantity, setQuantity] = useState(1);
     const quantityRef = useRef();
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const toastSuccess = (text) => {
+        toast.success(text, {
+            position: "top-center",
+        });
+    };
+    const toastError = (text) => {
+        toast.error(text, {
+            position: "top-center",
+        });
+    };
     const productStore = useSelector(
         (store) => store.productStore.listProducts
     );
@@ -138,12 +148,14 @@ export default function Menu_Item() {
                                     addToCart({
                                         productId: product.id,
                                         quantity: quantity,
-                                        des: "abdhawbdawbdhwbd",
-                                        // product: setStock,
+                                        des: "đã mua sản phẩm",
                                         url: product.url,
                                         name: product.name,
                                         price: product.price,
                                     });
+                                    toastSuccess(
+                                        `bạn vừa mua ${quantity} ${product.name}`
+                                    );
                                 }}
                             >
                                 ADD TO CART
@@ -172,6 +184,7 @@ export default function Menu_Item() {
                     </div>
                 </div>
             </div>
+            <Toaster />
         </div>
     );
 }

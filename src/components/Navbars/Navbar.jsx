@@ -148,7 +148,7 @@ export default function Navbar() {
                                                 onClick={() =>
                                                     navigator("cart")
                                                 }
-                                                class="material-symbols-outlined "
+                                                class="material-symbols-outlined item__cart"
                                             >
                                                 shopping_cart
                                                 <span className="cart__quantity">

@@ -8,7 +8,7 @@
       "lastName": "hai",
       "password": 123,
       "email": "haikien1@gmail.com",
-      "avatar": "https://vi.pngtree.com/freepng/user-avatar-boy_4693645.html",
+      "avatar": "../images/avatar/avatar.jpg",
       "carts": [
         {
           "productId": "1",
@@ -29,7 +29,7 @@
       "idAdmin": false,
       "firstName": "New",
       "lastName": "Member",
-      "avatar": "../images/food/Chateaubriand.png",
+      "avatar": "../images/avatar/avatar.jpg",
       "id": 2,
       "carts": [
         {
@@ -62,6 +62,22 @@
           "des": "abdhawbdawbdhwbd",
           "url": "../images/food/Ribeye_Rossini.jpg",
           "name": "Ribeye Rossini",
+          "price": 30000
+        },
+        {
+          "productId": "9",
+          "quantity": 12,
+          "des": "đã mua sản phẩm",
+          "url": "../images/drink/KAIKEN_RESERVA_MALBEC.jpg",
+          "name": "KAIKEN RESERVA",
+          "price": 30000
+        },
+        {
+          "productId": "16",
+          "quantity": 3,
+          "des": "đã mua sản phẩm",
+          "url": "../images/drink/VISTALBA_CORTE_C.jpg",
+          "name": "VISTALBA CORTE C",
           "price": 30000
         }
       ],
