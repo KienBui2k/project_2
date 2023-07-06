@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import "./Cart.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { productActions } from "../../stores/slices/products.slice";
 import { userLoginActions } from "../../stores/slices/userLogin.slice";
 import Cart_item from "./Cart_Item/Cart_item";
 import { Link, useNavigate } from "react-router-dom";
@@ -51,7 +48,7 @@ function Carts() {
             return total + food.price * food.quantity;
         }, 0);
         setSubTotal(foodSubTotal);
-    }, [cartsLocalStore]);
+    }, [cartsLocalStore, cartsLocal]);
 
     useEffect(() => {
         if (cartsLocal) {
@@ -87,7 +84,11 @@ function Carts() {
                         <span></span>
                     </div>
                     <Link
-                        to="/checkOut"
+                        to={
+                            userLoginStore.userInfor != null
+                                ? "/checkOut"
+                                : "/login"
+                        }
                         className="check__out__btn"
                         onClick={handleClose}
                     >

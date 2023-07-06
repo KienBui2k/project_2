@@ -9,18 +9,8 @@
       "password": 123,
       "email": "haikien1@gmail.com",
       "avatar": "../images/avatar/avatar.jpg",
-      "carts": [
-        {
-          "productId": "1",
-          "quantity": 2,
-          "des": "abdhawbdawbdhwbd"
-        },
-        {
-          "productId": "9",
-          "quantity": 5,
-          "des": "abdhawbdawbdhwbd"
-        }
-      ]
+      "carts": [],
+      "receip": []
     },
     {
       "userName": "hai kien",
@@ -33,180 +23,182 @@
       "id": 2,
       "carts": [
         {
-          "productId": "3",
-          "quantity": 5,
-          "des": "abdhawbdawbdhwbd",
-          "url": "../images/food/kagoshima_A5_copy.png",
-          "name": "Wagyu_A5",
-          "price": 30000
-        },
-        {
           "productId": "1",
-          "quantity": 3,
-          "des": "abdhawbdawbdhwbd",
+          "quantity": 1,
+          "des": "đã mua sản phẩm",
           "url": "../images/food/Chateaubriand.png",
           "name": "Chateaubriand",
-          "price": 30000
+          "price": 30
         },
         {
           "productId": "10",
-          "quantity": 1,
-          "des": "abdhawbdawbdhwbd",
+          "quantity": 2,
+          "des": "đã mua sản phẩm",
           "url": "../images/drink/KAIKEN_ULTRA_MALBEC.jpg",
           "name": "KAIKEN MALBEC",
-          "price": 30000
-        },
-        {
-          "productId": "8",
-          "quantity": 1,
-          "des": "abdhawbdawbdhwbd",
-          "url": "../images/food/Ribeye_Rossini.jpg",
-          "name": "Ribeye Rossini",
-          "price": 30000
-        },
-        {
-          "productId": "9",
-          "quantity": 12,
-          "des": "đã mua sản phẩm",
-          "url": "../images/drink/KAIKEN_RESERVA_MALBEC.jpg",
-          "name": "KAIKEN RESERVA",
-          "price": 30000
-        },
-        {
-          "productId": "16",
-          "quantity": 3,
-          "des": "đã mua sản phẩm",
-          "url": "../images/drink/VISTALBA_CORTE_C.jpg",
-          "name": "VISTALBA CORTE C",
-          "price": 30000
+          "price": 80
         }
       ],
-      "receip": []
+      "receip": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "des": "đã mua sản phẩm",
+          "url": "../images/food/Chateaubriand.png",
+          "name": "Chateaubriand",
+          "price": 30
+        },
+        {
+          "productId": "3",
+          "quantity": 2,
+          "des": "đã mua sản phẩm",
+          "url": "../images/food/kagoshima_A5_copy.png",
+          "name": "Wagyu_A5",
+          "price": 31
+        },
+        {
+          "productId": "12",
+          "quantity": 2,
+          "des": "đã mua sản phẩm",
+          "url": "../images/drink/LE_VOLTE_DELL_ORNELLAIA.jpg",
+          "name": "LE VOLTE DELL",
+          "price": 76
+        },
+        {
+          "productId": "1",
+          "quantity": 1,
+          "des": "đã mua sản phẩm",
+          "url": "../images/food/Chateaubriand.png",
+          "name": "Chateaubriand",
+          "price": 30
+        }
+      ]
     },
     {
-      "userName": "bui hai kien",
-      "email": "haikien12@gmail.com",
-      "password": "0978656694",
+      "userName": "kien",
+      "email": "haikein12@gmail.com",
+      "password": "123",
       "idAdmin": false,
       "firstName": "New",
       "lastName": "Member",
-      "avatar": "",
-      "id": 3,
-      "carts": []
+      "avatar": "../images/avatar/avatar.jpg",
+      "carts": [],
+      "receip": [],
+      "id": 3
     }
   ],
   "products": [
     {
       "id": "1",
       "name": "Chateaubriand",
-      "price": 30000,
+      "price": 30,
       "url": "../images/food/Chateaubriand.png",
       "type": "food",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "2",
       "name": "FILET ROSSINI",
-      "price": 30000,
+      "price": 32,
       "url": "../images/food/FILET_ROSSINI.jpg",
       "type": "food",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "3",
       "name": "Wagyu_A5",
-      "price": 30000,
+      "price": 31,
       "url": "../images/food/kagoshima_A5_copy.png",
       "type": "food",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "4",
       "name": "MIX_Grill",
-      "price": 30000,
+      "price": 29,
       "url": "../images/food/MIX_Grill.png",
       "type": "food",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "5",
       "name": "New York Striploin",
-      "price": 30000,
+      "price": 332,
       "url": "../images/food/New_York_Striploin.png",
       "type": "food",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "6",
       "name": "FILET MIGNON",
-      "price": 30000,
+      "price": 33,
       "url": "../images/food/RIB_EYE_MS_6_7.png",
       "type": "food",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "7",
       "name": "CHATEAUBRIAND USDA ",
-      "price": 30000,
+      "price": 31,
       "url": "../images/food/Rib_eye_USDA_Prime.png",
       "type": "food",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "8",
       "name": "Ribeye Rossini",
-      "price": 30000,
+      "price": 30,
       "url": "../images/food/Ribeye_Rossini.jpg",
       "type": "food",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "9",
       "name": "KAIKEN RESERVA",
-      "price": 30000,
+      "price": 70,
       "url": "../images/drink/KAIKEN_RESERVA_MALBEC.jpg",
       "type": "drink",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "10",
       "name": "KAIKEN MALBEC",
-      "price": 30000,
+      "price": 80,
       "url": "../images/drink/KAIKEN_ULTRA_MALBEC.jpg",
       "type": "drink",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "11",
       "name": "LAPOSTOLLE CABE",
-      "price": 30000,
+      "price": 75,
       "url": "../images/drink/LAPOSTOLLE_CABERNET.jpg",
       "type": "drink",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "12",
       "name": "LE VOLTE DELL",
-      "price": 30000,
+      "price": 76,
       "url": "../images/drink/LE_VOLTE_DELL_ORNELLAIA.jpg",
       "type": "drink",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "13",
       "name": "MOUTON CADET BARON",
-      "price": 30000,
+      "price": 77,
       "url": "../images/drink/MOUTON_CADET_BY_BARON _F.ROTHSCHILD.jpg",
       "type": "drink",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "14",
       "name": "SALENTEIN BARREL",
-      "price": 30000,
+      "price": 78,
       "url": "../images/drink/SALENTEIN_BARREL_SELECTION.jpg",
       "type": "drink",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "15",
@@ -214,15 +206,15 @@
       "price": 30000,
       "url": "../images/drink/SALENTEIN_SINGLE_VINEYARD.jpg",
       "type": "drink",
-      "stock": 5
+      "stock": 12
     },
     {
       "id": "16",
       "name": "VISTALBA CORTE C",
-      "price": 30000,
+      "price": 72,
       "url": "../images/drink/VISTALBA_CORTE_C.jpg",
       "type": "drink",
-      "stock": 5
+      "stock": 12
     }
   ]
 }

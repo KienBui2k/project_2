@@ -91,7 +91,15 @@ export default function Cart_item({
                     <div className="item__infor">
                         <h5>{item.name}</h5>
                         <i
-                            onClick={() => handleDeleteProduct(item.productId)}
+                            onClick={() => {
+                                if (
+                                    window.confirm(
+                                        "Bạn có muốn xóa sản phẩm này không?"
+                                    )
+                                ) {
+                                    handleDeleteProduct(item.productId);
+                                }
+                            }}
                             class="fa-solid fa-trash"
                         ></i>
                     </div>

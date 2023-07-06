@@ -3,28 +3,48 @@
 .login_container {
     width: 100%;
     height: calc(100vh - $heightNavbar);
-    background-color: rgba(blue, 0.3);
+    background-image: url(../../../public/images/background_img/bg1.png);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
 
     .login_form {
-        background-color: #fff;
+        background-color: rgba(rgb(64, 66, 66), 0.8);
         width: 700px;
         height: 400px;
         border-radius: 5px;
         padding: 15px;
-
+        display: flex;
+        flex-direction: column;
         .form_title {
-            color: black;
+            color: white;
             text-align: center;
-            font-weight: 900;
-            font-family: $fontTitle;
+            font-weight: 600;
+            // font-family: $fontTitle;
             font-size: 2em;
         }
-
-        .form_input {}
+        .btn__option {
+            width: 90%;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            // .register_btn {
+            //     background-color: green;
+            // }
+        }
+        .input__infor {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            input {
+                width: 600px;
+                margin-top: 8px;
+            }
+        }
     }
-
 }

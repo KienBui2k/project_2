@@ -14,7 +14,8 @@ export default function Cart_ItemLocal({
     const [itemData, setItemData] = useState(item);
     const dispatch = useDispatch();
     const userLoginStore = useSelector((store) => store.userLoginStore);
-    const [priceItem, setPriceItem] = useState(item.price);
+    const [priceItem, setPriceItem] = useState(0);
+    const [quantity, setQuantity] = useState(item.quantity);
 
     useEffect(() => {
         dispatch(
@@ -26,40 +27,6 @@ export default function Cart_ItemLocal({
         setItemData(item);
         setPriceItem(item.price * itemData.quantity);
     }, [item]);
-
-    function handleDeleteProduct(productId) {
-        let carts = userLoginStore.userInfor.carts;
-        let updatedCart = carts.filter(
-            (product) => product.productId !== productId
-        );
-
-        setCartData(updatedCart);
-
-        dispatch(
-            userLoginActions.updateCart({
-                userId: userLoginStore.userInfor.id,
-                carts: {
-                    carts: updatedCart,
-                },
-            })
-        );
-    }
-
-    function handleDecreaseQuantity() {
-        if (itemData.quantity > 1) {
-            setItemData((prevItemData) => ({
-                ...prevItemData,
-                quantity: prevItemData.quantity - 1,
-            }));
-        }
-    }
-
-    function handleIncreaseQuantity() {
-        setItemData((prevItemData) => ({
-            ...prevItemData,
-            quantity: prevItemData.quantity + 1,
-        }));
-    }
 
     useEffect(() => {
         setCartData((prevCartData) => [...prevCartData]);
@@ -81,13 +48,19 @@ export default function Cart_ItemLocal({
                     <div className="item__infor">
                         <h5>{itemData.name}</h5>
                         <i
-                            onClick={() =>
-                                dispatch(
-                                    cartsActions.deleteItemInCart(
-                                        itemData.productId
+                            onClick={() => {
+                                if (
+                                    window.confirm(
+                                        "Bạn có muốn xóa sản phẩm này không ?"
                                     )
-                                )
-                            }
+                                ) {
+                                    dispatch(
+                                        cartsActions.deleteItemInCart(
+                                            itemData.productId
+                                        )
+                                    );
+                                }
+                            }}
                             className="fa-solid fa-trash"
                         ></i>
                     </div>
@@ -95,12 +68,28 @@ export default function Cart_ItemLocal({
                         <div className="quantity__yourcart">
                             <div className="quantity__yourCart">
                                 <i
-                                    onClick={handleDecreaseQuantity}
+                                    onClick={() => {
+                                        setQuantity(quantity - 1);
+                                        dispatch(
+                                            cartsActions.updateItemInCart({
+                                                ...item,
+                                                quantity: quantity - 1,
+                                            })
+                                        );
+                                    }}
                                     className="fa-solid fa-minus"
                                 ></i>
-                                <span>{itemData.quantity}</span>
+                                <span>{quantity}</span>
                                 <i
-                                    onClick={handleIncreaseQuantity}
+                                    onClick={() => {
+                                        setQuantity(quantity + 1);
+                                        dispatch(
+                                            cartsActions.updateItemInCart({
+                                                ...item,
+                                                quantity: quantity + 1,
+                                            })
+                                        );
+                                    }}
                                     className="fa-solid fa-plus"
                                 ></i>
                             </div>

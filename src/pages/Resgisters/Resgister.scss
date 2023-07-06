@@ -11,42 +11,44 @@
         margin: 0 auto;
         width: 35%;
         height: 500px;
-        background-color: rgba(rgb(188, 195, 195), 0.3);
+        background-color: rgba(rgb(64, 66, 66), 0.8);
         text-align: center;
         padding: 8px;
-        // padding-top: 40px;
         display: flex;
         flex-direction: column;
         h1 {
             margin: 20px 0;
-            color: rgb(255, 115, 0);
+            color: white;
         }
         .form-control {
             background-color: rgb(rgb(146, 141, 141), 0.1) !important;
-            color: rgb(255, 115, 0) !important;
+            color: white !important;
             margin: 12px 0;
         }
         input::placeholder {
-            color: rgb(255, 72, 0);
+            color: white;
         }
         .buttonRegister {
             width: 80%;
             height: 32px;
             margin: 0 auto;
             background-color: white;
-            color: rgb(255, 72, 0);
+            color: black;
         }
         .login__btn {
             height: 32px;
             background-color: white;
-            color: rgb(255, 72, 0);
+            color: black;
             width: 80%;
             margin: 10px auto;
             display: flex;
             // align-items: center;
             justify-content: center;
             span {
-                color: black;
+                color: orange;
+            }
+            span:hover {
+                cursor: pointer;
             }
         }
     }

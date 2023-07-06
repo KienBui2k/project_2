@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { productActions } from "../../../stores/slices/products.slice";
 import { userLoginActions } from "../../../stores/slices/userLogin.slice";
 import toast, { Toaster } from "react-hot-toast";
+import { cartsActions } from "../../../stores/slices/cart.slice";
+import { convertToUSD } from "@mieuteacher/meomeojs";
 export default function Menu_Item() {
     const { id } = useParams();
     const [quantity, setQuantity] = useState(1);
@@ -84,10 +86,12 @@ export default function Menu_Item() {
             if (!flag) {
                 carts?.push(buyItem);
             }
+            dispatch(cartsActions.updateCartlocal(carts));
             localStorage.setItem("carts", JSON.stringify(carts));
         } else {
             // chưa từng có
             let carts = [buyItem];
+            dispatch(cartsActions.updateCartlocal(carts));
             localStorage.setItem("carts", JSON.stringify(carts));
         }
     }
@@ -125,7 +129,7 @@ export default function Menu_Item() {
                             ></i>
                         </div>
                         <div className="price__yourCart">
-                            <p>120$</p>
+                            <p>{convertToUSD(product?.price)}</p>
                         </div>
                     </div>
                     <div className="item__option">

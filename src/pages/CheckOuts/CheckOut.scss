@@ -11,7 +11,6 @@
         .user__infor__container {
             width: 50%;
             height: 100%;
-            border: 1px solid black;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,13 +44,21 @@
                         justify-content: center;
                         align-items: center;
                         text-decoration: none;
-                        width: 100px;
+
                         height: 40px;
-                        background-color: orange;
+
                         color: black;
                         border-radius: 12px;
                         font-weight: 600;
                         cursor: pointer;
+                        button {
+                            height: 40px;
+                            width: 100px;
+                            background-color: orange;
+                            color: black;
+                            border-radius: 12px;
+                            font-weight: 600;
+                        }
                     }
                     .backToCart {
                         width: 50%;
@@ -60,7 +67,7 @@
                         justify-content: center;
                         align-items: center;
                         text-decoration: none;
-
+                        cursor: pointer;
                         button {
                             width: 100px;
                             height: 40px;

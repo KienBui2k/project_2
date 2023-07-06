@@ -49,6 +49,7 @@ export default function CheckOut() {
             );
             setIsInformationComplete(true);
             navigate("/Menu/food");
+            toastSuccess("thanks!");
         }
     };
     return (
@@ -109,7 +110,7 @@ export default function CheckOut() {
                                 className="checkOut__btn"
                                 onClick={handleCheckOut}
                             >
-                                Check Out
+                                <button> Check Out</button>
                             </div>
                         </div>
                     </div>

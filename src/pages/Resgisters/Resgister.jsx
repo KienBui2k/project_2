@@ -3,11 +3,23 @@ import { useDispatch, useSelector } from "react-redux";
 import Loading from "@components/Loadings/Loading";
 import { userLoginActions } from "../../stores/slices/userLogin.slice";
 import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 import "./Resgister.scss";
 import axios from "axios";
 export default function Resgister() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const toastSuccess = (text) => {
+        toast.success(text, {
+            position: "top-center",
+        });
+    };
+    const toastError = (text) => {
+        toast.error(text, {
+            position: "top-center",
+        });
+    };
+
     const userLoginStore = useSelector((store) => store.userLoginStore);
     const [loadingCheck, setLoadingCheck] = useState(false);
     useEffect(() => {
@@ -38,14 +50,14 @@ export default function Resgister() {
                         eventForm.target.inputUserName.value == "" ||
                         eventForm.target.inputUserEmail.value == ""
                     ) {
-                        alert("vui long dien thu thong tin");
+                        toastError("vui long dien thu thong tin");
                         return;
                     }
                     if (
                         eventForm.target.inputPassword.value !=
                         eventForm.target.inputRePassword.value
                     ) {
-                        alert("Mật khẩu không đúng");
+                        toastError("Mật khẩu xác nhận không đúng");
                         return;
                     }
                     if (loadingCheck) {
@@ -59,11 +71,12 @@ export default function Resgister() {
                             eventForm.target.inputUserName.value
                     );
                     if (resultCheck.data.length != 0) {
-                        alert("ten gnuoi dung da ton tai");
+                        toastError("ten gnuoi dung da ton tai");
                         setLoadingCheck(false);
                         return;
                     }
                     setLoadingCheck(false);
+                    toastSuccess("bạn đã đăng ksy thành công");
                     dispatch(
                         userLoginActions.register({
                             userName: eventForm.target.inputUserName.value,
@@ -128,6 +141,7 @@ export default function Resgister() {
                     </span>
                 </div>
             </form>
+            <Toaster />
         </div>
     );
 }

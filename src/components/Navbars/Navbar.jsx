@@ -12,7 +12,9 @@ export default function Navbar() {
     const productStore = useSelector((store) => store.productStore);
     const [showResult, setShowResult] = useState(false);
     const result = productStore.searchName;
-
+    const [cartsLocal, setCartsLocal] = useState(() =>
+        JSON.parse(localStorage.getItem("carts"))
+    );
     const handleOnChange = (e) => {
         clearTimeout(timeOutTarget);
         setTimeOutTarget(
@@ -37,17 +39,16 @@ export default function Navbar() {
         setShowResult(false);
     };
     const [cartQuantity, setCartQuantity] = useState(0);
-
     useEffect(() => {
         const checkToken = localStorage.getItem("token");
         if (checkToken !== "") {
             setCartQuantity(userLoginStore.userInfor?.carts?.length || 0);
         } else {
-            const carts = JSON.parse(localStorage.getItem("carts")) || [];
+            const carts = JSON.parse(localStorage.getItem("carts"));
             setCartQuantity(carts.length);
         }
-    }, [userLoginStore]);
-    console.log(cartQuantity);
+    }, [userLoginStore, cartsLocal]);
+
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light navbar__container">
@@ -169,21 +170,25 @@ export default function Navbar() {
                                             <Link
                                                 to="/login"
                                                 onClick={() => {
-                                                    alert(
-                                                        "Ban co muon dang xuat khong"
-                                                    );
-                                                    localStorage.removeItem(
-                                                        "token"
-                                                    );
-                                                    dispatch(
-                                                        userLoginActions.logOut()
-                                                    );
-                                                    navigator("/login");
+                                                    if (
+                                                        window.confirm(
+                                                            "Bạn có muốn đăng xuất không?"
+                                                        )
+                                                    ) {
+                                                        localStorage.removeItem(
+                                                            "token"
+                                                        );
+                                                        dispatch(
+                                                            userLoginActions.logOut()
+                                                        );
+                                                        navigator("/login");
+                                                    }
                                                 }}
                                             >
                                                 <i className="fa-solid fa-right-from-bracket"></i>
                                             </Link>
                                         </div>
+
                                         <div className="hello__user">
                                             <h5>
                                                 hello{" "}
