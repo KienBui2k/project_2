@@ -16,14 +16,13 @@ function Carts() {
     const [cartsLocal, setCartsLocal] = useState(() =>
         JSON.parse(localStorage.getItem("carts"))
     );
-
     const cartsLocalStore = useSelector((store) => store.cartsLocalStore);
-
     console.log(cartsLocalStore);
-
     const navigator = useNavigate();
     const dispatch = useDispatch();
+    const [subTotal, setSubTotal] = useState(0);
     const userLoginStore = useSelector((store) => store.userLoginStore);
+    console.log(userLoginStore);
     const [cartData, setCartData] = useState(
         userLoginStore.userInfor?.carts || []
     );
@@ -39,29 +38,38 @@ function Carts() {
             setCartDataLoaded(true);
         }
     }, [userLoginStore.userInfor]);
-    const foodSubTotal = cartData.reduce((total, food) => {
-        return total + food.price * food.quantity;
-    }, 0);
 
-    const [subTotal, setSubTotal] = useState(foodSubTotal);
+    useEffect(() => {
+        const foodSubTotal = cartData.reduce((total, food) => {
+            return total + food.price * food.quantity;
+        }, 0);
+        setSubTotal(foodSubTotal);
+    }, [cartData]);
 
+    useEffect(() => {
+        const foodSubTotal = cartsLocalStore.reduce((total, food) => {
+            return total + food.price * food.quantity;
+        }, 0);
+        setSubTotal(foodSubTotal);
+    }, [cartsLocalStore]);
+
+    useEffect(() => {
+        if (cartsLocal) {
+            const cartsLocalData = JSON.parse(localStorage.getItem("carts"));
+            setCartsLocal(cartsLocalData);
+        }
+    }, [cartsLocal]);
     return (
         <>
             <div className="cart__container">
-                {/* {cartData.map((item) => {
-                    return (
-                        <Cart_item
-                            item={item}
-                            setCartData={setCartData}
-                            cartData={cartData}
-                            setSubTotal={setSubTotal}
-                        ></Cart_item>
-                    );
-                })} */}
-
                 {cartsLocal
                     ? cartsLocalStore?.map((item) => (
-                          <Cart_ItemLocal item={item} />
+                          <Cart_ItemLocal
+                              item={item}
+                              setCartData={setCartData}
+                              cartData={cartData}
+                              setSubTotal={setSubTotal}
+                          />
                       ))
                     : cartData?.map((item) => (
                           <Cart_item

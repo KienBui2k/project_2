@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.scss";
 import { userLoginActions } from "../../stores/slices/userLogin.slice";
@@ -12,6 +12,7 @@ export default function Navbar() {
     const productStore = useSelector((store) => store.productStore);
     const [showResult, setShowResult] = useState(false);
     const result = productStore.searchName;
+
     const handleOnChange = (e) => {
         clearTimeout(timeOutTarget);
         setTimeOutTarget(
@@ -35,7 +36,18 @@ export default function Navbar() {
         navigator("/detail/" + itemId);
         setShowResult(false);
     };
+    const [cartQuantity, setCartQuantity] = useState(0);
 
+    useEffect(() => {
+        const checkToken = localStorage.getItem("token");
+        if (checkToken !== "") {
+            setCartQuantity(userLoginStore.userInfor?.carts?.length || 0);
+        } else {
+            const carts = JSON.parse(localStorage.getItem("carts")) || [];
+            setCartQuantity(carts.length);
+        }
+    }, [userLoginStore]);
+    console.log(cartQuantity);
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light navbar__container">
@@ -136,9 +148,12 @@ export default function Navbar() {
                                                 onClick={() =>
                                                     navigator("cart")
                                                 }
-                                                class="material-symbols-outlined"
+                                                class="material-symbols-outlined "
                                             >
                                                 shopping_cart
+                                                <span className="cart__quantity">
+                                                    {cartQuantity}
+                                                </span>
                                             </span>
                                         </div>
                                         <div className="user__avatar">
@@ -190,6 +205,9 @@ export default function Navbar() {
                                                 class="material-symbols-outlined"
                                             >
                                                 shopping_cart
+                                                <span className="cart__quantity">
+                                                    {cartQuantity}
+                                                </span>
                                             </span>
                                         </div>
                                         <div className="user__icon">
