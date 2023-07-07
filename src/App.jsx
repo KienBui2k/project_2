@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import LazyLoad from "./LazyLoad";
 import Navbar from "@components/Navbars/Navbar";
 import Footer from "./components/Footer/Footer";
-import BoxSearch from "./pages/Searchs/BoxSearch";
 
 function App() {
     return (
@@ -15,8 +14,6 @@ function App() {
             </div>
 
             <div className="app_container">
-                {/* Content Router */}
-                {/* <BoxSearch></BoxSearch> */}
                 <Routes>
                     <Route
                         path=""

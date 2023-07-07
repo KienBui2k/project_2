@@ -158,7 +158,7 @@ export default function Menu_Item() {
                                         price: product.price,
                                     });
                                     toastSuccess(
-                                        `bạn vừa mua ${quantity} ${product.name}`
+                                        `Add to cart successfully ${quantity} ${product.name}`
                                     );
                                 }}
                             >

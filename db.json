@@ -53,6 +53,44 @@
       "carts": [],
       "receipt": [],
       "id": 3
+    },
+    {
+      "userName": "buihaikien",
+      "email": "haikien12132@gmail.com",
+      "password": "123456",
+      "idAdmin": false,
+      "firstName": "New",
+      "lastName": "Member",
+      "avatar": "../images/avatar/avatar.jpg",
+      "carts": [
+        {
+          "productId": "3",
+          "quantity": 2,
+          "des": "đã mua sản phẩm",
+          "url": "../images/food/kagoshima_A5_copy.png",
+          "name": "Wagyu_A5",
+          "price": 31
+        }
+      ],
+      "receipt": [
+        {
+          "productId": "10",
+          "quantity": 2,
+          "des": "đã mua sản phẩm",
+          "url": "../images/drink/KAIKEN_ULTRA_MALBEC.jpg",
+          "name": "KAIKEN MALBEC",
+          "price": 80
+        },
+        {
+          "productId": "1",
+          "quantity": 1,
+          "des": "đã mua sản phẩm",
+          "url": "../images/food/Chateaubriand.png",
+          "name": "Chateaubriand",
+          "price": 30
+        }
+      ],
+      "id": 4
     }
   ],
   "products": [

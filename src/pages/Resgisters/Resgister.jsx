@@ -45,43 +45,64 @@ export default function Resgister() {
             <form
                 onSubmit={async (eventForm) => {
                     eventForm.preventDefault();
+                    const inputPassword = eventForm.target.inputPassword.value;
+                    const inputRePassword =
+                        eventForm.target.inputRePassword.value;
+                    const inputUserName = eventForm.target.inputUserName.value;
+                    const inputUserEmail =
+                        eventForm.target.inputUserEmail.value;
+
                     if (
-                        eventForm.target.inputPassword.value == "" ||
-                        eventForm.target.inputUserName.value == "" ||
-                        eventForm.target.inputUserEmail.value == ""
+                        inputPassword === "" ||
+                        inputUserName === "" ||
+                        inputUserEmail === ""
                     ) {
-                        toastError("please provide the following information!");
+                        toastError("Please provide all required information!");
                         return;
                     }
-                    if (
-                        eventForm.target.inputPassword.value !=
-                        eventForm.target.inputRePassword.value
-                    ) {
+
+                    if (inputPassword.length < 6) {
+                        toastError(
+                            "Password should be at least 6 characters long."
+                        );
+                        return;
+                    }
+
+                    if (inputUserEmail.indexOf("@") === -1) {
+                        toastError("Invalid email address.");
+                        return;
+                    }
+
+                    if (inputPassword !== inputRePassword) {
                         toastError("Wrong confirmation password");
                         return;
                     }
+
                     if (loadingCheck) {
                         return;
                     }
+
                     setLoadingCheck(true);
                     let resultCheck = await axios.get(
                         process.env.REACT_APP_SERVER_JSON +
                             "users" +
                             "?userName=" +
-                            eventForm.target.inputUserName.value
+                            inputUserName
                     );
-                    if (resultCheck.data.length != 0) {
+
+                    if (resultCheck.data.length !== 0) {
                         toastError("This username already exists!");
                         setLoadingCheck(false);
                         return;
                     }
+
                     setLoadingCheck(false);
                     toastSuccess("You have successfully registered");
                     dispatch(
                         userLoginActions.register({
-                            userName: eventForm.target.inputUserName.value,
-                            email: eventForm.target.inputUserEmail.value,
-                            password: eventForm.target.inputPassword.value,
+                            userName: inputUserName,
+                            email: inputUserEmail,
+                            password: inputPassword,
                             idAdmin: false,
                             firstName: "New",
                             lastName: "Member",

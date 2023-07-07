@@ -44,7 +44,7 @@ export default function Login() {
                         eventForm.target.inputUserName.value == "" ||
                         eventForm.target.inputPassword.value == ""
                     ) {
-                        toastError("vui lòng điền đầy đủ các trường");
+                        toastError("please provide the following information");
                         return;
                     } else {
                         toastSuccess("wellcome!");
