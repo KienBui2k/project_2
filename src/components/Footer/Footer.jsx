@@ -60,7 +60,7 @@ export default function Footer() {
                     <div className="footer__infor__contact">
                         Follow us:{" "}
                         <a
-                            href="https://www.facebook.com/pages/El-Gaucho-Argentinian-Steakhouse/431753733549508"
+                            href="https://www.facebook.com/profile.php?id=100094166633529"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

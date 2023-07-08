@@ -14,14 +14,22 @@
     },
     {
       "userName": "hai kien",
-      "email": "haikein12@gmail.com",
-      "password": "12345",
+      "email": "haikien123@gmail.com",
+      "password": "123456",
       "idAdmin": false,
       "firstName": "New",
       "lastName": "Member",
       "avatar": "../images/avatar/avatar.jpg",
-      "id": 2,
-      "carts": [
+      "carts": [],
+      "receipt": [
+        {
+          "productId": "2",
+          "quantity": 1,
+          "des": "đã mua sản phẩm",
+          "url": "../images/food/FILET_ROSSINI.jpg",
+          "name": "FILET ROSSINI",
+          "price": 32
+        },
         {
           "productId": "1",
           "quantity": 2,
@@ -29,68 +37,33 @@
           "url": "../images/food/Chateaubriand.png",
           "name": "Chateaubriand",
           "price": 30
-        }
-      ],
-      "receipt": [
-        {
-          "productId": "9",
-          "quantity": 3,
-          "des": "đã mua sản phẩm",
-          "url": "../images/drink/KAIKEN_RESERVA_MALBEC.jpg",
-          "name": "KAIKEN RESERVA",
-          "price": 70
-        }
-      ]
-    },
-    {
-      "userName": "kien",
-      "email": "haikein12@gmail.com",
-      "password": "123",
-      "idAdmin": false,
-      "firstName": "New",
-      "lastName": "Member",
-      "avatar": "../images/avatar/avatar.jpg",
-      "carts": [],
-      "receipt": [],
-      "id": 3
-    },
-    {
-      "userName": "buihaikien",
-      "email": "haikien12132@gmail.com",
-      "password": "123456",
-      "idAdmin": false,
-      "firstName": "New",
-      "lastName": "Member",
-      "avatar": "../images/avatar/avatar.jpg",
-      "carts": [
-        {
-          "productId": "3",
-          "quantity": 2,
-          "des": "đã mua sản phẩm",
-          "url": "../images/food/kagoshima_A5_copy.png",
-          "name": "Wagyu_A5",
-          "price": 31
-        }
-      ],
-      "receipt": [
+        },
         {
           "productId": "10",
-          "quantity": 2,
+          "quantity": 3,
           "des": "đã mua sản phẩm",
           "url": "../images/drink/KAIKEN_ULTRA_MALBEC.jpg",
           "name": "KAIKEN MALBEC",
           "price": 80
         },
         {
-          "productId": "1",
+          "productId": "7",
           "quantity": 1,
           "des": "đã mua sản phẩm",
-          "url": "../images/food/Chateaubriand.png",
-          "name": "Chateaubriand",
-          "price": 30
+          "url": "../images/food/Rib_eye_USDA_Prime.png",
+          "name": "CHATEAUBRIAND USDA ",
+          "price": 31
+        },
+        {
+          "productId": "5",
+          "quantity": 3,
+          "des": "đã mua sản phẩm",
+          "url": "../images/food/New_York_Striploin.png",
+          "name": "New York Striploin",
+          "price": 32
         }
       ],
-      "id": 4
+      "id": 2
     }
   ],
   "products": [

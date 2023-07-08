@@ -30,16 +30,6 @@ const checkOut = createAsyncThunk(
     }
 
 )
-// const updateStock = createAsyncThunk(
-//     "updateStock",
-//     async (rsid, stock) => {
-//         // console.log("reset stock id ", risd);
-//         console.log("reset stock  ", stock);
-//         let res = await axios.get(`${process.env.REACT_APP_SERVER_JSON}products?id = ${rsid}`);
-//         console.log(res.data);
-//         return res.data
-//     }
-// );
 const productSlice = createSlice(
     {
         name: "product",
